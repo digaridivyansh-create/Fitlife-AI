@@ -1,0 +1,63 @@
+﻿# Environment files and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies and virtual environments
+**/node_modules/
+**/.venv/
+**/.venv-*/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+
+# Build output
+**/dist/
+**/dist-ssr/
+**/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Local backups and temporary files
+*.backup
+*.backup-*
+*.bak
+*.tmp
+*.local
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Accidental empty file in the project root
+/-Pattern
+
+# Historical source and migration backups
+*.backup*
+
+# Historical backup files
+*backup*
+
+# Editor backup files
+*.bak
+*.bak-*
+
+# Local diagnostic and test-account utilities
+/backend/check-test-account.js
+/backend/reset-test-password.js
+/backend/diagnose-chat-db.js
+/backend/inspect-database.js
+/backend/inspect-workout-constraints.js
+/backend/inspect-workout-indexes.js
+
+# Local pose-analysis test images
+/ai-service/pose_test*.jpg
