@@ -1,4 +1,4 @@
-require("dotenv").config();
+﻿require("dotenv").config();
 
 const Fastify = require("fastify");
 const helmet = require("@fastify/helmet");
@@ -30,8 +30,22 @@ async function start() {
 
   await app.register(helmet);
 
+  const allowedOrigins = (
+    process.env.CORS_ORIGIN ||
+    "http://localhost:5173,https://fitlife-ai-frontend.vercel.app"
+  )
+    .split(",")
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+
   await app.register(cors, {
-    origin: "http://localhost:5173",
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Origin not allowed by CORS"), false);
+      }
+    },
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   });
 
@@ -135,6 +149,7 @@ start().catch(async (error) => {
   await pool.end();
   process.exit(1);
 });
+
 
 
 
