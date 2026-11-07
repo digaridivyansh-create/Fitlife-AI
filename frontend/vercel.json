@@ -4,6 +4,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://fitlife-ai-z38g.onrender.com/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
