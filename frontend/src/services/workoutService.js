@@ -35,7 +35,7 @@ export const workoutService = {
     }),
 
   getPlans: (token, limit = 20, offset = 0) =>
-    request(`/?limit=${limit}&offset=${offset}`, {
+    request(`?limit=${limit}&offset=${offset}`, {
       method: 'GET',
       token,
     }),
