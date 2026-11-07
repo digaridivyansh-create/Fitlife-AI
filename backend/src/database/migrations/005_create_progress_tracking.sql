@@ -1,4 +1,4 @@
-﻿BEGIN;
+BEGIN;
 
 -- Required before the composite foreign key is created.
 CREATE UNIQUE INDEX IF NOT EXISTS idx_workout_plans_id_user

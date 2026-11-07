@@ -1,0 +1,8 @@
+﻿{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://fitlife-ai-z38g.onrender.com/api/$1"
+    }
+  ]
+}
