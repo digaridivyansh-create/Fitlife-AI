@@ -6,6 +6,7 @@ FitLife AI is an intelligent fitness and wellness platform that combines Artific
 The platform brings workout planning, food analysis, fitness conversations, progress tracking, and exercise form analysis together in one integrated application.
 
 Our goal is to make personalized fitness guidance more accessible, interactive, and data-driven.
+live link=https://fitlife-ai-frontend.vercel.app/
 
 ---
 
